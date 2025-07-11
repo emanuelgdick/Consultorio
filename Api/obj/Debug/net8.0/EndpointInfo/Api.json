@@ -1933,12 +1933,38 @@
             "type": "string",
             "nullable": true
           },
-          "diagnostico": {
+          "cdiag": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Diagnostico"
+              "$ref": "#/components/schemas/ConsultaDiagnostico"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultaDiagnostico": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idConsulta": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "consulta": {
+            "$ref": "#/components/schemas/Consulta"
+          },
+          "idDiagnostico": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "diagnostico": {
+            "$ref": "#/components/schemas/Diagnostico"
           }
         },
         "additionalProperties": false

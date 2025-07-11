@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using FrontEnd.Models;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FrontEnd.Models
@@ -8,16 +10,12 @@ namespace FrontEnd.Models
         [Key]
         public int Id { get; set; }
 
-
-
         [ForeignKey("Consulta")]
         public int? IdConsulta { get; set; }
         public Consulta? Consulta { get; set; }
 
-
         [ForeignKey("Diagnostico")]
         public int? IdDiagnostico { get; set; }
         public Diagnostico? Diagnostico { get; set; }
-
     }
 }

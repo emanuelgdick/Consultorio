@@ -13,7 +13,6 @@ namespace Api.Models
         
         [ForeignKey("Medico")]
         public int IdMedico { get; set; }
-       
         public  Paciente? Paciente { get; set; }
         
         [ForeignKey("Paciente")]
@@ -24,6 +23,7 @@ namespace Api.Models
         public string? color { get; set; }
         public string? observaciones { get; set; }
 
-        public ICollection<Diagnostico>? Cdiag { get; set; }
+       
+        public ICollection<ConsultaDiagnostico>? Cdiag { get; set; }
     }
 }

@@ -92,16 +92,11 @@ namespace Api.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("ConsultaId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Descripcion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ConsultaId");
 
                     b.ToTable("Diagnostico");
                 });
@@ -341,7 +336,7 @@ namespace Api.Migrations
             modelBuilder.Entity("Api.Models.ConsultaDiagnostico", b =>
                 {
                     b.HasOne("Api.Models.Consulta", "Consulta")
-                        .WithMany()
+                        .WithMany("Cdiag")
                         .HasForeignKey("IdConsulta");
 
                     b.HasOne("Api.Models.Diagnostico", "Diagnostico")
@@ -351,13 +346,6 @@ namespace Api.Migrations
                     b.Navigation("Consulta");
 
                     b.Navigation("Diagnostico");
-                });
-
-            modelBuilder.Entity("Api.Models.Diagnostico", b =>
-                {
-                    b.HasOne("Api.Models.Consulta", null)
-                        .WithMany("Diagnostico")
-                        .HasForeignKey("ConsultaId");
                 });
 
             modelBuilder.Entity("Api.Models.Paciente", b =>
@@ -395,7 +383,7 @@ namespace Api.Migrations
 
             modelBuilder.Entity("Api.Models.Consulta", b =>
                 {
-                    b.Navigation("Diagnostico");
+                    b.Navigation("Cdiag");
                 });
 
             modelBuilder.Entity("Api.Models.Paciente", b =>

@@ -25,13 +25,13 @@
         margin-top: 100px
     }
 
-   /*  body {
-        background: #00B4DB;
-        background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
-        background: linear-gradient(to right, #0083B0, #00B4DB);
-        color: #514B64;
-        min-height: 100vh
-    } */
+    /*  body {
+            background: #00B4DB;
+            background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
+            background: linear-gradient(to right, #0083B0, #00B4DB);
+            color: #514B64;
+            min-height: 100vh
+        } */
 </style>
 
 <script src="~/lib/daypilot/daypilot-all.min.js" asp-append-version="true"></script>
@@ -134,22 +134,12 @@
                         <div class="row d-flex justify-content-center m-3">
                             <div class="col-12">
                                 <select id="cbodiagnostico" placeholder="Seleccione Diagnósticos" multiple>
-                                    @*   <option value="HTML">HTML</option>
-                                    <option value="Jquery">Jquery</option>
-                                    <option value="CSS">CSS</option>
-                                    <option value="Bootstrap 3">Bootstrap 3</option>
-                                    <option value="Bootstrap 4">Bootstrap 4</option>
-                                    <option value="Java">Java</option>
-                                    <option value="Javascript">Javascript</option>
-                                    <option value="Angular">Angular</option>
-                                    <option value="Python">Python</option>
-                                    <option value="Hybris">Hybris</option>
-                                    <option value="SQL">SQL</option>
-                                    <option value="NOSQL">NOSQL</option>
-                                    <option value="NodeJS">NodeJS</option> *@
                                 </select>
                             </div>
                         </div>
+
+
+                        <h6><a href="#" id="add_Multiple-Fields">Add Multiple Fields</a></h6>
 
 
                         <div class="row m-3 ">
@@ -181,17 +171,24 @@
     <script>
 
 
-               $(document).ready(function(){
+        var multipleCancelButton
+        $(document).ready(function(){
 
-            var multipleCancelButton = new Choices('#cbodiagnostico', {
+               multipleCancelButton= new Choices('#cbodiagnostico', {
                removeItemButton: true,
                maxItemCount:100,
                searchResultLimit:100,
                renderChoiceLimit:100
              });
 
+             
 
-        });
+
+
+             });
+
+
+
 
         function load() {
             calendar.events.load("/Consulta/Events");
@@ -333,7 +330,7 @@
                 $("<option>").attr({ "value": "0", "enabled": "true" }).text("Seleccionar").appendTo("#cbomedico");
                 $.each(data.data, function (index, value) {
                     $("<option>").attr({ "value": value.id }).text(value.apeyNom).appendTo("#cbomedicoF");
-                   
+
                 });
             },
             error: function (error) {
@@ -363,7 +360,7 @@
 
 
         //DIAGNOSTICOS
-         //GET PACIENTES
+        var diag=[];
         jQuery.ajax({
             url: '@Url.Action("GetAllDiagnosticos", "Diagnostico")',
             type: "GET",
@@ -373,7 +370,8 @@
             success: function (data) {
                 $("<option>").attr({ "value": "0", "enabled": "true" }).text("Seleccionar").appendTo("#cbodiagnostico");
                 $.each(data.data, function (index, value) {
-                    pacientes.push({ id: value.id, name: value.apeyNom });
+                    //pacientes.push({ id: value.id, name: value.apeyNom });
+                    diag.push({ id: value.id, name: value.descripcion });
                     $("<option>").attr({ "value": value.id }).text(value.descripcion).appendTo("#cbodiagnostico");
                 });
             },
@@ -382,7 +380,7 @@
             }
         });
 
-
+        
         const datepicker = new DayPilot.Navigator("nav", {
             showMonths: 3,
 
@@ -503,12 +501,44 @@
                 hasta = moment(args.e.data.end.value);
                 $("#txtstart").val(desde.format('DD-MM-YYYY HH:mm'));
                 $("#txtend").val(hasta.format('DD-MM-YYYY HH:mm'));
-                debugger;
+
                 $("#cbopaciente").val(args.e.data.idPaciente);
                 $("#cbomedico").val(args.e.data.idMedico);
                 $("#txtobs").val(args.e.data.text);
                 $("#txtid").val(args.e.data.id);
                 $("#colorSelect").val(args.e.data.color);
+
+                
+                var jsonModulo = {
+                    'datos': []
+                    };
+
+
+        
+        for (var i = 0; i <args.e.data.cdiag.length; i++) {
+          
+               for (var j = 0; j <diag.length; j++) {
+                    if (diag[j].id==args.e.data.cdiag[i].idDiagnostico){
+                        console.log(diag[j].name);
+                        jsonModulo.datos.push({
+                                  "IdConsulta": args.e.data.cdiag[i].idConsulta,
+                                  "IdDiagnostico": args.e.data.cdiag[i].idDiagnostico,
+                                  "Descripcion":diag[j].name
+                              }
+                              );
+                    };
+                };
+
+        }
+
+
+            var json = JSON.stringify(jsonModulo);
+            var obj = JSON.parse(json);
+            multipleCancelButton.val('').trigger("change");
+            for (var i = 0; i <obj.datos.length; i++) {
+            multipleCancelButton.setValue(obj.datos[i].Descripcion);
+
+            }
             }
             else {
                 desde = desde = moment(args.start.value);
@@ -516,6 +546,7 @@
                 $("#txtstart").val(desde.format('DD-MM-YYYY HH:mm'));
                 $("#txtend").val(hasta.format('DD-MM-YYYY HH:mm'));
                 $("#cbopaciente").val(0);
+                // $("#cbodiagnostico").val(0);
                 if ($("#cbomedicoF").val() == 0) {
                     $("#cbomedico").val(0)
                 } else {
@@ -553,18 +584,7 @@
 
             if (mme.length == 1) { mme = '0' + mme; }
 
-            function obtenerSeleccionados() {
-          const select = document.getElementById('cbodiagnostico');
-          //const resultado = document.getElementById('resultado');
-          let seleccionados = [];
-          for (let i = 0; i < select.options.length; i++) {
-            if (select.options[i].selected) {
-              seleccionados.push(select.options[i].value);
-            }
-          }
-         // resultado.textContent = 'Seleccionados: ' + seleccionados.join(', ');
-         return seleccionados;
-        }
+
 
         const select = document.getElementById('cbodiagnostico');
            var jsonModulo = {
@@ -572,8 +592,8 @@
             };
             for (var i = 0; i <select.options.length; i++) {
                 jsonModulo.datos.push({
-                    "Id": select.options[i].value,
-                    "Descripcion": select.options[i].text
+                    "IdConsulta": 0,
+                    "IdDiagnostico": select.options[i].value
                 });
             };
             var json = JSON.stringify(jsonModulo);
@@ -583,7 +603,7 @@
 
             const consu = {
                 text: $(`#cbopaciente option:selected`).text(),
-                color: $("#colorSelect").val(),//$("#cbocolor").val(),
+                color: $("#colorSelect").val(),
                 Id: $("#txtid").val(),
                 start: moment(yyyys + "-" + MMs + "-" + DDs + " " + HHs + ":" + mms).format('YYYY-MM-DDTHH:mm:00'),
                 end: moment(yyyye + "-" + MMe + "-" + DDe + " " + HHe + ":" + mme).format('YYYY-MM-DDTHH:mm:00'),

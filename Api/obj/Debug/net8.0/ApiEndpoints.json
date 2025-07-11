@@ -187,7 +187,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "event",
+        "Name": "consulta",
         "Type": "Api.Models.Consulta",
         "IsRequired": true
       }
