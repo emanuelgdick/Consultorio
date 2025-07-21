@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Api.Migrations
 {
     [DbContext(typeof(ConsultorioContext))]
-    [Migration("20250709131509_Uno")]
+    [Migration("20250715200732_Uno")]
     partial class Uno
     {
         /// <inheritdoc />
@@ -339,8 +339,16 @@ namespace Api.Migrations
             modelBuilder.Entity("Api.Models.ConsultaDiagnostico", b =>
                 {
                     b.HasOne("Api.Models.Consulta", "Consulta")
-                        .WithMany("Cdiag")
+                        .WithMany()
                         .HasForeignKey("IdConsulta");
+
+                    b.HasOne("Api.Models.Diagnostico", null)
+                        .WithMany("Consultas")
+                        .HasForeignKey("IdConsulta");
+
+                    b.HasOne("Api.Models.Consulta", null)
+                        .WithMany("Diagnosticos")
+                        .HasForeignKey("IdDiagnostico");
 
                     b.HasOne("Api.Models.Diagnostico", "Diagnostico")
                         .WithMany()
@@ -386,7 +394,12 @@ namespace Api.Migrations
 
             modelBuilder.Entity("Api.Models.Consulta", b =>
                 {
-                    b.Navigation("Cdiag");
+                    b.Navigation("Diagnosticos");
+                });
+
+            modelBuilder.Entity("Api.Models.Diagnostico", b =>
+                {
+                    b.Navigation("Consultas");
                 });
 
             modelBuilder.Entity("Api.Models.Paciente", b =>

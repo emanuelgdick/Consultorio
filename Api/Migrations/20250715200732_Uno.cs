@@ -215,6 +215,16 @@ namespace Api.Migrations
                         principalTable: "Consulta",
                         principalColumn: "Id");
                     table.ForeignKey(
+                        name: "FK_ConsultaDiagnostico_Consulta_IdDiagnostico",
+                        column: x => x.IdDiagnostico,
+                        principalTable: "Consulta",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_ConsultaDiagnostico_Diagnostico_IdConsulta",
+                        column: x => x.IdConsulta,
+                        principalTable: "Diagnostico",
+                        principalColumn: "Id");
+                    table.ForeignKey(
                         name: "FK_ConsultaDiagnostico_Diagnostico_IdDiagnostico",
                         column: x => x.IdDiagnostico,
                         principalTable: "Diagnostico",

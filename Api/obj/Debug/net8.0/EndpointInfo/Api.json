@@ -1933,7 +1933,7 @@
             "type": "string",
             "nullable": true
           },
-          "cdiag": {
+          "diagnosticos": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ConsultaDiagnostico"
@@ -1952,16 +1952,14 @@
           },
           "idConsulta": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "consulta": {
             "$ref": "#/components/schemas/Consulta"
           },
           "idDiagnostico": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "diagnostico": {
             "$ref": "#/components/schemas/Diagnostico"
@@ -1982,6 +1980,13 @@
           "descripcion": {
             "minLength": 1,
             "type": "string"
+          },
+          "consultas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ConsultaDiagnostico"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false

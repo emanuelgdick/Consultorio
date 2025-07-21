@@ -6,7 +6,7 @@ namespace Api.Models
     {
         public ConsultorioContext(DbContextOptions options) : base(options)
         {
-
+          
         }
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<TipoDocumento> TipoDocumento { get; set; }
@@ -18,6 +18,8 @@ namespace Api.Models
         public DbSet<Paciente> Paciente { get; set; }
         public DbSet<Consulta> Consulta { get; set; }
         public DbSet<ConsultaDiagnostico> ConsultaDiagnostico { get; set; }
+
+
 
     }
 }

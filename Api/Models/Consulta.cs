@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace Api.Models
 {
+    [DataContract(IsReference = true)]
     public class Consulta
     {
         [Key]
@@ -23,7 +25,6 @@ namespace Api.Models
         public string? color { get; set; }
         public string? observaciones { get; set; }
 
-       
-        public ICollection<ConsultaDiagnostico>? Cdiag { get; set; }
+        public virtual ICollection<ConsultaDiagnostico> Diagnosticos { get; set; }
     }
 }

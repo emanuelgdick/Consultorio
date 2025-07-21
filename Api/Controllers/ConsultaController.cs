@@ -38,12 +38,14 @@ namespace Api.Controllers
             var consulta = _db.Consulta.ToList();
             var mutual = _db.Mutual.ToList();
             var conDiag = _db.ConsultaDiagnostico.ToList();
+            var Diag = _db.Diagnostico.ToList();
             var medico = _db.Medico.Where(s=>s.TieneAgenda==true).ToList();
 
             var resultado = from con in consulta
                             join pac in paciente on con.IdPaciente equals pac.Id into consultaPaciente
                             join mut in mutual on con.Paciente.IdMutual equals mut.Id into mutualPaciente
                             join cd in conDiag on con.Id equals cd.IdConsulta into diagPaciente
+                            
                             from cp in consultaPaciente.DefaultIfEmpty()
                             from mp in mutualPaciente.DefaultIfEmpty()
                             
@@ -58,7 +60,7 @@ namespace Api.Controllers
                                 IdMedico = con.IdMedico,
                                 color =con.color,
                                 mutual=con.Paciente.IdMutual == null ? "" :mp.DescA,
-                                cdiag = diagPaciente
+                                diagnosticos = diagPaciente
                             };
                 
 
@@ -260,6 +262,7 @@ namespace Api.Controllers
             @event.IdPaciente = param.IdPaciente;
             @event.observaciones = param.observaciones;
             @event.color = param.color;
+            @event.Diagnosticos = param.Diagnosticos;
 
             try
             {
@@ -300,7 +303,7 @@ namespace Api.Controllers
             
           
                 Consulta c = consulta;
-                c.Cdiag = consulta.Cdiag;
+               
 
                 _db.Consulta.Add(c);
                 await _db.SaveChangesAsync();

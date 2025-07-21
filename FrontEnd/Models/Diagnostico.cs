@@ -1,7 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using FrontEnd.Models;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace FrontEnd.Models
 {
+    
     public class Diagnostico
     {
         [Key]
@@ -9,5 +14,6 @@ namespace FrontEnd.Models
 
         [Required]
         public string Descripcion { get; set; }
+        public virtual ICollection<ConsultaDiagnostico> Consultas { get; set; }
     }
 }

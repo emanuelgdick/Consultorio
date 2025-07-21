@@ -184,8 +184,6 @@ wwwroot\css\nprogress\nprogress.css
 wwwroot\css\nprogress\nprogress.js
 wwwroot\css\pnotify\.bower.json
 wwwroot\css\pnotify\bower.json
-wwwroot\css\select2\dist\css\select2.css
-wwwroot\css\select2\dist\css\select2.min.css
 wwwroot\css\SweetAlert\sweetalert.css
 wwwroot\css\switchery\switchery.css
 wwwroot\css\switchery\switchery.min.css

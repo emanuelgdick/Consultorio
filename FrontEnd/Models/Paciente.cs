@@ -53,7 +53,7 @@ namespace FrontEnd.Models
         [AllowHtml]
         public string? Historia { get; set; }
 
-        //[JsonIgnore]
+        [JsonIgnore]
         public IEnumerable<Consulta>? Consulta { get; set; }
         //public string? foto { get; set; }
 

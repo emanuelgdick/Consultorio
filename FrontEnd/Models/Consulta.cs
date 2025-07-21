@@ -1,11 +1,12 @@
-﻿using Frontend.Models;
-using FrontEnd.Models;
+﻿using FrontEnd.Models;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace FrontEnd.Models
 {
+   
     public class Consulta
     {
         [Key]
@@ -15,8 +16,7 @@ namespace FrontEnd.Models
 
         [ForeignKey("Medico")]
         public int IdMedico { get; set; }
-       
-        public   Paciente? Paciente { get; set; }
+        public Paciente? Paciente { get; set; }
 
         [ForeignKey("Paciente")]
         public int IdPaciente { get; set; }
@@ -25,7 +25,6 @@ namespace FrontEnd.Models
         public string text { get; set; }
         public string? color { get; set; }
         public string? observaciones { get; set; }
-
-        public ICollection<ConsultaDiagnostico>? Cdiag { get; set; }
+        public virtual ICollection<ConsultaDiagnostico> Diagnosticos { get; set; }
     }
 }

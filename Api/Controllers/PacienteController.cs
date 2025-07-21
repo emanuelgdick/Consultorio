@@ -38,8 +38,7 @@ namespace Api.Controllers
 
             // Realizar la unión utilizando Join
             var resultado = (from pac in paciente
-                             join prof in profesion
-                             on pac.IdProfesion equals prof.Id into profesionPaciente
+                             join prof in profesion on pac.IdProfesion equals prof.Id into profesionPaciente
                              from pp in profesionPaciente.DefaultIfEmpty()
                              join con in consulta   on pac.Id equals con.IdPaciente into consultaPaciente
                            

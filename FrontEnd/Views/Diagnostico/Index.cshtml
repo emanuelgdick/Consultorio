@@ -232,7 +232,7 @@
                     }
                 ],
                  "ajax": {
-                     url: "@Url.Action("GetAllDiagnosticos", "Diagnostico")",
+                     url: "@Url.Action("GetAllDiagnosticos", "Diagnostico")?q=null",
                      type: "GET",
                      dataType: "json",
                     beforeSend: agregarToast({ tipo: 'exito', titulo: 'Obteniendo Diagnósticos', descripcion: 'Por favor espere...', autoCierre: true })

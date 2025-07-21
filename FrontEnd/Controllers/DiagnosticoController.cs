@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft;
 using System.Security.Claims;
+using System.Web.WebPages;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace FrontEnd.Controllers
 {
@@ -39,11 +41,22 @@ namespace FrontEnd.Controllers
 
         [Authorize(Roles = "Admin")]
         [ResponseCache(Duration = 30)]
-        public async Task<JsonResult> GetAllDiagnosticos()
+        public async Task<JsonResult> GetAllDiagnosticos(string? q = null)
         {
             List<Diagnostico> oLista = new List<Diagnostico>();
             oLista = await _apiService.GetAllDiagnosticos(HttpContext.Session.GetString("APIToken"));
-            return Json(new { data = oLista });
+            List<Diagnostico>resultados = new List<Diagnostico>();
+            if (q=="null")
+            {
+                resultados = oLista.ToList();
+                return Json(new { data = resultados });
+            }
+            else {
+                resultados = oLista.Where(s => s.Descripcion.ToLower().Contains(q.ToLower())).ToList();
+                //oLista = resultados.Select(c => new { id = c.Id, text = c.Descripcion }).ToList();
+                return Json(new { data = resultados.Select(c => new { id = c.Id, text = c.Descripcion }).ToList() });
+            }
+            
         }
 
 
@@ -61,7 +74,7 @@ namespace FrontEnd.Controllers
         public async Task<JsonResult> CreateDiagnostico([FromBody] Diagnostico diagnostico)
         {
             object resultado;
-            string mensaje = String.Empty;
+            string mensaje = System.String.Empty;
             try
             {
                 if (diagnostico.Id == 0)

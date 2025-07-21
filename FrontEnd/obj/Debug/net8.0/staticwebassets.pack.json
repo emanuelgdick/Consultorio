@@ -749,14 +749,6 @@
       "PackagePath": "staticwebassets\\css\\pnotify\\bower.json"
     },
     {
-      "Id": "C:\\Consultorio\\FrontEnd\\wwwroot\\css\\select2\\dist\\css\\select2.css",
-      "PackagePath": "staticwebassets\\css\\select2\\dist\\css\\select2.css"
-    },
-    {
-      "Id": "C:\\Consultorio\\FrontEnd\\wwwroot\\css\\select2\\dist\\css\\select2.min.css",
-      "PackagePath": "staticwebassets\\css\\select2\\dist\\css\\select2.min.css"
-    },
-    {
       "Id": "C:\\Consultorio\\FrontEnd\\wwwroot\\css\\switchery\\switchery.css",
       "PackagePath": "staticwebassets\\css\\switchery\\switchery.css"
     },
