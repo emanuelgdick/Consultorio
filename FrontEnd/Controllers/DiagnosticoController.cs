@@ -46,7 +46,7 @@ namespace FrontEnd.Controllers
             List<Diagnostico> oLista = new List<Diagnostico>();
             oLista = await _apiService.GetAllDiagnosticos(HttpContext.Session.GetString("APIToken"));
             List<Diagnostico>resultados = new List<Diagnostico>();
-            if (q=="null")
+            if (q==null)
             {
                 resultados = oLista.ToList();
                 return Json(new { data = resultados });

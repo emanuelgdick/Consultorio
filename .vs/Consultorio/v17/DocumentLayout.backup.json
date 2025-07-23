@@ -7,24 +7,20 @@
       "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\consulta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AA678DB3-D24E-462A-8611-852C08884C77}|Api\\Api.csproj|c:\\consultorio\\api\\controllers\\consultacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA678DB3-D24E-462A-8611-852C08884C77}|Api\\Api.csproj|solutionrelative:api\\controllers\\consultacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\controllers\\consultacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\controllers\\consultacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AA678DB3-D24E-462A-8611-852C08884C77}|Api\\Api.csproj|c:\\consultorio\\api\\controllers\\pacientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AA678DB3-D24E-462A-8611-852C08884C77}|Api\\Api.csproj|solutionrelative:api\\controllers\\pacientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\controllers\\diagnosticocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\controllers\\diagnosticocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA678DB3-D24E-462A-8611-852C08884C77}|Api\\Api.csproj|c:\\consultorio\\api\\controllers\\consultacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA678DB3-D24E-462A-8611-852C08884C77}|Api\\Api.csproj|solutionrelative:api\\controllers\\consultacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,33 +46,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Views\\Consulta\\Index.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\Consulta\\Index.cshtml",
+              "ToolTip": "C:\\Consultorio\\FrontEnd\\Views\\Consulta\\Index.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\Consulta\\Index.cshtml",
+              "ViewState": "AgIAABUCAAAAAAAAAAAkwCQCAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-22T21:01:25.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PacienteController.cs",
               "DocumentMoniker": "C:\\Consultorio\\Api\\Controllers\\PacienteController.cs",
               "RelativeDocumentMoniker": "Api\\Controllers\\PacienteController.cs",
               "ToolTip": "C:\\Consultorio\\Api\\Controllers\\PacienteController.cs",
               "RelativeToolTip": "Api\\Controllers\\PacienteController.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAgwCgAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAgwIMAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-19T21:48:00.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ConsultaController.cs",
               "DocumentMoniker": "C:\\Consultorio\\Api\\Controllers\\ConsultaController.cs",
               "RelativeDocumentMoniker": "Api\\Controllers\\ConsultaController.cs",
               "ToolTip": "C:\\Consultorio\\Api\\Controllers\\ConsultaController.cs",
               "RelativeToolTip": "Api\\Controllers\\ConsultaController.cs",
-              "ViewState": "AgIAAOkAAAAAAAAAAAAIwPoAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAOgAAAAAAAAAAAAUwPoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-19T20:01:14.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ApiService.cs",
               "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Services\\ApiService.cs",
               "RelativeDocumentMoniker": "FrontEnd\\Services\\ApiService.cs",
@@ -89,41 +98,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Views\\Consulta\\Index.cshtml",
-              "RelativeDocumentMoniker": "FrontEnd\\Views\\Consulta\\Index.cshtml",
-              "ToolTip": "C:\\Consultorio\\FrontEnd\\Views\\Consulta\\Index.cshtml",
-              "RelativeToolTip": "FrontEnd\\Views\\Consulta\\Index.cshtml",
-              "ViewState": "AgIAAOEAAAAAAAAAAAAAAO4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-16T19:12:06.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ConsultaController.cs",
-              "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Controllers\\ConsultaController.cs",
-              "RelativeDocumentMoniker": "FrontEnd\\Controllers\\ConsultaController.cs",
-              "ToolTip": "C:\\Consultorio\\FrontEnd\\Controllers\\ConsultaController.cs",
-              "RelativeToolTip": "FrontEnd\\Controllers\\ConsultaController.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAADwv10AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T10:57:31.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "DiagnosticoController.cs",
               "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Controllers\\DiagnosticoController.cs",
               "RelativeDocumentMoniker": "FrontEnd\\Controllers\\DiagnosticoController.cs",
               "ToolTip": "C:\\Consultorio\\FrontEnd\\Controllers\\DiagnosticoController.cs",
               "RelativeToolTip": "FrontEnd\\Controllers\\DiagnosticoController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAswDYAAABbAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAUwC4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T19:34:30.005Z"
+              "WhenOpened": "2025-07-18T19:34:30.005Z",
+              "EditorCaption": ""
             }
           ]
         }
