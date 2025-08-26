@@ -330,6 +330,15 @@ namespace FrontEnd.Services
 
         }
 
+
+        public async Task UpdateHcPaciente(int id, Paciente paciente, string token)
+        {
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            HttpResponseMessage response = await _httpClient.PostAsJsonAsync<string>($"api/Paciente/UpdateHcPaciente?id={paciente.Id}", paciente.Historia);
+            response.EnsureSuccessStatusCode();
+
+        }
+
         public async Task DeletePaciente(int id, string token)
         {
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);

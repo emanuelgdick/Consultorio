@@ -137,6 +137,29 @@ namespace FrontEnd.Controllers
             return Json(new { resultado = resultado, mensaje = mensaje });
         }
 
+
+
+
+        [Authorize(Roles = "Admin")]
+        [ResponseCache(Duration = 30)]
+        public async Task<JsonResult> UpdateHCPaciente([FromBody] Paciente paciente)
+        {
+            object resultado = null;
+            string mensaje = String.Empty;
+                try
+                {
+                     await _apiService.UpdateHcPaciente(paciente.Id, paciente, HttpContext.Session.GetString("APIToken"));
+                     resultado = true;
+                     mensaje = "Paciente modificado correctamente";
+               }
+                catch (Exception ex)
+                {
+                    resultado = false;
+                    mensaje += ex.Message;
+                }
+            return Json(new { resultado = resultado, mensaje = mensaje });
+        }
+
         [Authorize(Roles = "Admin,Student")]
         [ResponseCache(Duration = 30)]
         public async Task<IActionResult> Details(int id)

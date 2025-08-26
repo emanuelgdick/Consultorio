@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace Api.Controllers
@@ -69,6 +71,7 @@ namespace Api.Controllers
                                 codAflp = pac.codAflp,
                                 Historia = pac.Historia,
                                 NroHC = pac.NroHC,
+                                Observaciones = pac.Observaciones,
                                 //ConsultaDiagnostico = (from cd in _db.ConsultaDiagnostico
                                 //                       where cd.IdDiagnostico == con.Id
                                 //                select new //CarritoItem()
@@ -219,6 +222,31 @@ namespace Api.Controllers
 
         }
 
+
+
+
+
+        [HttpPost("UpdateHcPaciente")]
+        [Authorize]
+        public ActionResult<Paciente> UpdateHcPaciente(Int32 id, [FromBody] string historia)
+        {
+          
+
+            var Paciente = _db.Paciente.FirstOrDefault(x => x.Id == id);
+            if (Paciente == null)
+            {
+                return NotFound();
+            }
+
+            Paciente.Historia = historia;
+            _db.SaveChanges();
+            return Ok(Paciente);
+
+        }
+
+
+
+
         [HttpPut("DeletePaciente")]
         [Authorize(Roles = "Admin")]
         public ActionResult<Paciente> DeletePaciente(Int32 Id)
@@ -227,6 +255,21 @@ namespace Api.Controllers
             if (Paciente == null)
             {
                 return NotFound();
+            }
+
+            List<Consulta> consulta = _db.Consulta.Where(r => r.IdPaciente == Id).ToList();
+            List<ConsultaDiagnostico> consultaDiagnostico = new List<ConsultaDiagnostico>();
+
+
+            foreach (var c in consulta)
+            {
+
+                consultaDiagnostico = _db.ConsultaDiagnostico.Where(r => r.IdConsulta == c.Id).ToList();
+                foreach (var cd in consultaDiagnostico)
+                {
+                    _db.ConsultaDiagnostico.Remove(cd);
+                }
+                _db.Consulta.Remove(c);
             }
             _db.Remove(Paciente);
             _db.SaveChanges();

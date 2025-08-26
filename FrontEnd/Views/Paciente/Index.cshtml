@@ -117,268 +117,188 @@
                     <div class="col-md-12 col-sm-12 m-0 p-0">
                         <div class="x_panel  pt-3">
                             <div class="x_content">
-
-                                <!-- Smart Wizard -->
-                                <div id="wizard" class=" form_wizard wizard_horizontal ">
-                                    <ul class="wizard_steps">
-                                        <li>
-                                            <a href="#step-1">
-                                                <span class="step_no">1</span>
-                                                <span class="step_descr">
-                                                    Datos Filiatorios<br />
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#step-2">
-                                                <span class="step_no">2</span>
-                                                <span class="step_descr">
-                                                    Contacto<br />
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#step-3">
-                                                <span class="step_no">3</span>
-                                                <span class="step_descr">
-                                                    Datos Paciente<br />
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#step-4">
-                                                <span class="step_no">4</span>
-                                                <span class="step_descr">
-                                                    Consultas<br />
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#step-5">
-                                                <span class="step_no">4</span>
-                                                <span class="step_descr">
-                                                    Historia Clínica<br />
-                                                </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div id="step-1" style=" height: 320px; ">
-                                        <form id="formNivel" class="col-12 row m-1 " style="border:solid; border-color:#256080; border-width:2px; height:325px; border-radius: 8px;">
-                                            <div class="col-9 mt-5">
-                                                <div class="row">
-                                                    <div class="col-4 p-2 form-floating">
-                                                        <select id="cbotipodoc" class="form-select " name="tipodoc" autocomplete="off" placeholder="Tipo Documento"></select>
-                                                        <label for="cbotipodoc" class="form-label pt-1">Tipo Documento</label>
-                                                    </div>
-                                                    <div class="col-3 p-2 form-floating">
-                                                        <input type="text" class="form-control form-control-sm" id="txtdni" placeholder="Dni" />
-                                                        <label for="txtdni">Dni</label>
-                                                    </div>
-                                                    <div class="col-5 p-2 form-floating">
-                                                        <input type="text" class="form-control form-control-sm" id="txtapeynom" placeholder="Apellido y Nombre" />
-                                                        <label for="txtapeynom">Apellido y Nombre</label>
-                                                    </div>
-                                                </div>
-                                                <div class="row mt-4">
-                                                    <div class="col-4 p-2 form-floating mb-4 d-flex">
-                                                        <input type="text"
-                                                               class="datepicker_input form-control border-2"
-                                                               id="dtfechanac"
-                                                               required
-                                                               placeholder="DD/MM/YYYY">
-                                                        <label for="dtfechanac">Fecha Nacimiento</label>
-                                                    </div>
-                                                    <div class="col-5 p-2 form-floating">
-                                                        <select id="cboprofesion" class="form-select " name="profesion" autocomplete="off" placeholder="Profesión"></select>
-                                                        <label for="cboprofesion" class="form-label pt-1">Profesión</label>
-                                                    </div>
-                                                    <div class="col-3 mt-4">
-                                                        <div class="radio">
-                                                            <div class="row ">
-                                                                <input type="radio" name="sexo" value="F" id="rbF">
-                                                                <label for="F">Mujer</label>
-                                                            </div>
-
-                                                            <div class="row ">
-                                                                <input type="radio" name="sexo" value="M" id="rbM">
-                                                                <label for="M">Hombre</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3 mt-5">
-
-                                                @*       <video id="video" autoplay>
-                                                </video>
-                                                <canvas id="canvas" style="display:none;">
-                                                </canvas>
-                                                <div class="right text-center m-0">
-                                                <img id="imagen" src="/images/user.png" alt="Imagen capturada" class="img-circle img-fluid" style="border:solid; border-width:1px; border-color:#bf2c04">
-
-                                                </div>
-                                                <div class="row mt-3" style=" justify-content: center;">
-                                                <button id="botonCaptura" type="button" class="btn btnLimpiar" onclick="tomarFoto()">Tomar Foto</button>
-
-                                                </div> *@
-
-
-
-
-                                                @*   <div id="userphoto">
-                                                <div class="gravatar-wrapper-128 right text-center m-0">
-                                                <img id="imagen" src="/images/user.png" alt="" class=" logo  img-circle" width="150" height="150" style=" border:solid; border-width:1px; border-color:#bf2c04">
-                                                <input accept="image/*" type="file" id="upload" name="upload" onchange="readURL(this);" style="visibility: hidden;" />
-                                                </div>
-                                                <div class="row">
-                                                <div class="col-4 m-2 mr-5 p-0" title="Tomar foto">
-                                                <div style="text-align:end">
-                                                <a href="" id="botonCaptura" onclick="tomarFoto(); return false"><i class="fa fa-camera"></i></a>
-                                                </div>
-                                                </div>
-                                                <div class="col-4 m-2  p-0" title="Seleccionar foto">
-                                                <div style="text-align:center">
-                                                <a href="" onclick="changePicture(); return false"><i class="fa fa-file-image-o"></i></a>
-                                                </div>
-
-                                                </div>
-
-
-
-                                                <div class="change-picture-slide" style="top: 30px;  ">
-                                                <input accept="image/*" type="file" id="upload" name="upload" onchange="readURL(this);" style="visibility: hidden;" />
-                                                <a href="" onclick="changePicture(); return false"><i class="fa fa-camera"></i></a>
-                                                </div>
-
-                                                <div class="change-picture-slide" style="top: 30px; ">
-                                                <input accept="image/*" type="file" id="upload" name="upload" onchange="readURL(this);" style="visibility: hidden;" />
-                                                <a href="" onclick="changePicture(); return false"><i class="fa fa-file-image-o"></i></a>
-                                                </div>
-
-                                                </div>
-                                                </div> *@
-
-                                            </div>
-                                        </form>
+                                <form id="formNivel" class="col-12" style="border:solid; border-color:#256080; border-width:2px; height:550px; border-radius: 8px;">
+                                    <div class="row m-1">
+                                        <div class="col-3 p-2 form-floating">
+                                            <select id="cbotipodoc" class="form-select " name="tipodoc" autocomplete="off" placeholder="Tipo Documento"></select>
+                                            <label for="cbotipodoc" class="form-label pt-1">Tipo Documento</label>
+                                        </div>
+                                        <div class="col-2 p-2 form-floating">
+                                            <input type="text" class="form-control form-control-sm" id="txtdni" placeholder="Dni" />
+                                            <label for="txtdni">Dni</label>
+                                        </div>
+                                        <div class="col-4 p-2 form-floating">
+                                            <input type="text" class="form-control form-control-sm" id="txtapeynom" placeholder="Apellido y Nombre" />
+                                            <label for="txtapeynom">Apellido y Nombre</label>
+                                        </div>
+                                        <div class="col-3 p-2 form-floating mb-4 d-flex">
+                                            <input type="text"
+                                                   class="datepicker_input form-control border-2"
+                                                   id="dtfechanac"
+                                                   required
+                                                   placeholder="DD/MM/YYYY">
+                                            <label for="dtfechanac">Fecha Nacimiento</label>
+                                        </div>
                                     </div>
-                                    <div id="step-2" style=" height: 320px; ">
-                                        <form id="formNivel" class="col-12 row m-0 p-5" style="border:solid; border-color:#256080; border-width:2px; height:325px; border-radius: 8px;">
-                                            <div class="row">
-                                                <div class=" col-6 p-2 form-floating">
-                                                    <input type="text" class="form-control form-control-sm" id="txtcalle" placeholder="Calle" />
-                                                    <label for="txtcalle">Calle</label>
-                                                </div>
-                                                <div class="col-2 p-2 form-floating">
-                                                    <input type="text" class="form-control form-control-sm" id="txtnro" placeholder="Nro" />
-                                                    <label for="txtnro">Nro</label>
-                                                </div>
-                                                <div class="col-2 p-2 form-floating">
-                                                    <input type="text" class="form-control form-control-sm" id="txtpiso" placeholder="Piso" />
-                                                    <label for="txtpiso">Piso</label>
-                                                </div>
-                                                <div class="col-2 p-2 form-floating">
-                                                    <input type="text" class="form-control form-control-sm" id="txtdepto" placeholder="Depto" />
-                                                    <label for="txtdepto">Depto</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class=" col-4 p-2 form-floating">
-                                                    <select id="cbolocalidad" class="form-select " name="localidad" autocomplete="off" placeholder="Localidad"></select>
-                                                    <label for="cbolocalidad" class="form-label pt-1">Localidad</label>
-                                                </div>
-                                                <div class="col-4 p-2 form-floating">
-                                                    <input type="text" class="form-control form-control-sm" id="txttelfijo" placeholder="Teléfono Fijo" />
-                                                    <label for="txttelfijo">Teléfono Fijo</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-4 p-2 form-floating">
-                                                    <input type="text" class="form-control form-control-sm" id="txttelcelular" placeholder="Teléfono Celular" />
-                                                    <label for="txttelcelular">Teléfono Celular</label>
-                                                </div>
-                                                <div class="col-8 p-2 form-floating">
-                                                    <input type="text" class="form-control form-control-sm" id="txtemail" placeholder="Correo Electrónico" />
-                                                    <label for="txtemail">Correo Electrónico</label>
-                                                </div>
-                                            </div>
-                                        </form>
+                                    <div class="row m-1 ">
+                                        <div class=" col-3 p-2 form-floating">
+                                            <select id="cbolocalidad" class="form-select " name="localidad" autocomplete="off" placeholder="Localidad"></select>
+                                            <label for="cbolocalidad" class="form-label pt-1">Localidad</label>
+                                        </div>
+                                        <div class=" col-3 p-2 form-floating">
+                                            <input type="text" class="form-control form-control-sm" id="txtcalle" placeholder="Calle" />
+                                            <label for="txtcalle">Calle</label>
+                                        </div>
+                                        <div class="col-2 p-2 form-floating">
+                                            <input type="text" class="form-control form-control-sm" id="txtnro" placeholder="Nro" />
+                                            <label for="txtnro">Nro</label>
+                                        </div>
+                                        <div class="col-2 p-2 form-floating">
+                                            <input type="text" class="form-control form-control-sm" id="txtpiso" placeholder="Piso" />
+                                            <label for="txtpiso">Piso</label>
+                                        </div>
+                                        <div class="col-2 p-2 form-floating">
+                                            <input type="text" class="form-control form-control-sm" id="txtdepto" placeholder="Depto" />
+                                            <label for="txtdepto">Depto</label>
+                                        </div>
                                     </div>
-                                    <div id="step-3" style=" height: 320px; ">
-                                        <form id="formNivel" class="col-12 row m-0 p-5" style="border:solid; border-color:#256080; border-width:2px; height:325px; border-radius: 8px;">
-                                            <div class="row">
-                                                <div class="col-2 p-2 form-floating">
-                                                    <input type="text" class="form-control form-control-sm" id="txtnrohc" placeholder="N° Hc" />
-                                                    <label for="txtnrohc">N° Hc</label>
-                                                </div>
-                                                <div class=" col-4 p-2 form-floating">
-                                                    <select id="cbomedico" class="form-select " name="medico" autocomplete="off" placeholder="Médico"></select>
-                                                    <label for="cbomedico" class="form-label pt-1">Médico</label>
-                                                </div>
 
+                                    <div class="row m-1">
+                                        <div class="col-3 p-2 form-floating">
+                                            <select id="cboprofesion" class="form-select " name="profesion" autocomplete="off" placeholder="Profesión"></select>
+                                            <label for="cboprofesion" class="form-label pt-1">Profesión</label>
+                                        </div>
+                                        <div class="col-5 mt-4">
+                                            <div class="radio">
+                                                <div class="row ">
+                                                    <input type="radio" name="sexo" value="F" id="rbF">
+                                                    <label for="F">Mujer</label>
+                                                </div>
+                                                <div class="row ">
+                                                    <input type="radio" name="sexo" value="M" id="rbM">
+                                                    <label for="M">Hombre</label>
+                                                </div>
                                             </div>
-                                            <div class="row">
-                                                <div class=" col-4 p-2 form-floating">
-                                                    <select id="cbomutual" class="form-select " name="mutual" autocomplete="off" placeholder="Mutual"></select>
-                                                    <label for="cbomutual" class="form-label pt-1">Mutual</label>
-                                                </div>
-                                                <div class="col-2 p-2 form-floating">
-                                                    <input type="text" class="form-control form-control-sm" id="txtcodaflp" placeholder="Cód. Afiliado" />
-                                                    <label for="txtcodaflp">Cód. Afiliado</label>
-                                                </div>
-
-                                            </div>
-                                        </form>
+                                        </div>
                                     </div>
-                                    <div id="step-4" style=" height: 320px; ">
-                                        <form id="formNivelConsulta" class="col-12 row  m-0 p-5" style="border:solid; border-color:#256080; border-width:2px; height:325px; border-radius: 8px;">
 
-                                            <table id="tablaConsulta" class="display" style="width:100%">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Fecha</th>
-                                                        <th>Observaciones</th>
+                                    <div class="row m-1">
+                                        <div class="col-3 p-2 form-floating">
+                                            <input type="text" class="form-control form-control-sm" id="txttelfijo" placeholder="Teléfono Fijo" />
+                                            <label for="txttelfijo">Teléfono Fijo</label>
+                                        </div>
 
-
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                                <tfoot>
-                                                </tfoot>
-                                            </table>
-
-                                        </form>
+                                        <div class="col-3 p-2 form-floating">
+                                            <input type="text" class="form-control form-control-sm" id="txttelcelular" placeholder="Teléfono Celular" />
+                                            <label for="txttelcelular">Teléfono Celular</label>
+                                        </div>
+                                        <div class="col-4 p-2 form-floating">
+                                            <input type="text" class="form-control form-control-sm" id="txtemail" placeholder="Correo Electrónico" />
+                                            <label for="txtemail">Correo Electrónico</label>
+                                        </div>
                                     </div>
-                                    <div id="step-5" style=" height: 320px; ">
-                                        <form id="formNivel" class="col-12 row  m-0 p-1" style="border:solid; border-color:#256080; border-width:2px; height:325px; border-radius: 8px;">
-                                            <textarea id="tahistoria"></textarea>
-                                        </form>
+                                    <div class="row m-1">
+                                        <textarea id="taobservaciones"></textarea>
                                     </div>
-                                </div>
+                                </form>
+                                <!-- End SmartWizard Content -->
                             </div>
-                            <!-- End SmartWizard Content -->
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mt-0 p-0">
+                    <div class="col-12">
+                        <div id="mensajeError" class="alert-danger" role="alert">
                         </div>
                     </div>
                 </div>
 
-            </div>
-            <div class="row mt-0 p-0">
-                <div class="col-12">
-                    <div id="mensajeError" class="alert-danger" role="alert">
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btnCancelar" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btnAceptar" onclick="Guardar()">Guardar</button>
+
                 </div>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btnCancelar" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btnAceptar" onclick="Guardar()">Guardar</button>
 
             </div>
-
         </div>
     </div>
+
 </div>
+
+
+
+<!-- Modal Historia Clinica -->
+<div class="modal fade" id="FormModalHc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog  modal-lg ">
+        <div class="modal-content">
+            <div class="modal-header text-white" style="background: #2A3F54">
+                <h5 class="modal-title" id="exampleModalLabel">Historia Clínica</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body m-0 p-0">
+                <input id="txtid" type="hidden" value="0" />
+                <div class="row m-0 p-0">
+                    <div class="col-md-12 col-sm-12 m-0 p-0">
+                        <div class="x_panel  pt-3">
+                            <div class="x_content">
+                                <form id="formNivel" class="col-12" style="border:solid; border-color:#256080; border-width:2px; height:550px; border-radius: 8px;">
+                                    <div class="row m-1">
+                                        <div class="col-2 p-2 form-floating">
+                                            <input type="text" class="form-control form-control-sm" id="txtnrohc" placeholder="N° Hc" />
+                                            <label for="txtnrohc">N° Hc</label>
+                                        </div>
+                                        <div class=" col-4 p-2 form-floating">
+                                            <select id="cbomedico" class="form-select " name="medico" autocomplete="off" placeholder="Médico"></select>
+                                            <label for="cbomedico" class="form-label pt-1">Médico</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="row m-1">
+                                        <div class=" col-4 p-2 form-floating">
+                                            <select id="cbomutual" class="form-select " name="mutual" autocomplete="off" placeholder="Mutual"></select>
+                                            <label for="cbomutual" class="form-label pt-1">Mutual</label>
+                                        </div>
+                                        <div class="col-2 p-2 form-floating">
+                                            <input type="text" class="form-control form-control-sm" id="txtcodaflp" placeholder="Cód. Afiliado" />
+                                            <label for="txtcodaflp">Cód. Afiliado</label>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="row m-1">
+                                        <textarea id="tahistoria"></textarea>
+                                    </div>
+                                </form>
+             
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mt-0 p-0">
+                    <div class="col-12">
+                        <div id="mensajeError" class="alert-danger" role="alert">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btnCancelar" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btnAceptar" onclick="GuardarHistoria()">Guardar</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
 
 
 @section scripts {
@@ -529,48 +449,48 @@
                 // Iconos
                 const iconos = {
                     exito: `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                                                                                      <path
-                                                                                          d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"
-                                                                                      />
-                                                                                  </svg>`,
+                                                                                              <path
+                                                                                                  d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"
+                                                                                              />
+                                                                                          </svg>`,
                     error: `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                                                                                                  <path
-                                                                                                      d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
-                                                                                                  />
-                                                                                              </svg>`,
+                                                                                                          <path
+                                                                                                              d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                                                                                          />
+                                                                                                      </svg>`,
                     info: `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                                                                                                  <path
-                                                                                                      d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
-                                                                                                  />
-                                                                                              </svg>`,
+                                                                                                          <path
+                                                                                                              d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
+                                                                                                          />
+                                                                                                      </svg>`,
                     warning: `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                                                                                                  <path
-                                                                                                      d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
-                                                                                                  />
-                                                                                              </svg>`,
+                                                                                                          <path
+                                                                                                              d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                                                                                          />
+                                                                                                      </svg>`,
                 };
 
                 // Plantilla del toast
                 const toast = `
-                                                                          <div class="contenidoP">
-                                                                              <div class="icono">
-                                                                                  ${iconos[tipo]}
-                                                                              </div>
-                                                                              <div class="texto">
-                                                                                  <p class="titulo">${titulo}</p>
-                                                                                  <p class="descripcion">${descripcion}</p>
-                                                                              </div>
-                                                                          </div>
-                                                                          <button class="btn-cerrar">
-                                                                              <div class="icono">
-                                                                                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                                                                                      <path
-                                                                                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                                                                                      />
-                                                                                  </svg>
-                                                                              </div>
-                                                                          </button>
-                                                                      `;
+                                                                                  <div class="contenidoP">
+                                                                                      <div class="icono">
+                                                                                          ${iconos[tipo]}
+                                                                                      </div>
+                                                                                      <div class="texto">
+                                                                                          <p class="titulo">${titulo}</p>
+                                                                                          <p class="descripcion">${descripcion}</p>
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <button class="btn-cerrar">
+                                                                                      <div class="icono">
+                                                                                          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                                                                              <path
+                                                                                                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                                                                                              />
+                                                                                          </svg>
+                                                                                      </div>
+                                                                                  </button>
+                                                                              `;
 
                 // Agregar la plantilla al nuevo toast
                 nuevoToast.innerHTML = toast;
@@ -605,49 +525,49 @@
         //Abrir Modal
         function abrirModal(json) {
 
-
             var fnac;
             var diafnac;
             var mesfnac;
             var aniofnac;
-            $("#wizard").smartWizard('goToStep', 1)
+
             $("#txtid").val(0);
-            $("#txtnroPaciente").val('');
+            //$("#txtnroPaciente").val('');
             $("#txtapeynom").val('');
             $("#txtdni").val('');
             $("#cbotipodoc").val(0);
             $("#cbolocalidad").val(0);
-            $("#cbomedico").val(0);
-            $("#cbomutual").val(0);
+            // $("#cbomedico").val(0);
+            //$("#cbomutual").val(0);
             $("#cboprofesion").val(0);
-             fnac = new Date()
-             diafnac = `${(fnac.getDate())}`.padStart(2, '0');
-             mesfnac = `${(fnac.getMonth() + 1)}`.padStart(2, '0');
-             aniofnac = fnac.getFullYear();
+            fnac = new Date()
+            diafnac = `${(fnac.getDate())}`.padStart(2, '0');
+            mesfnac = `${(fnac.getMonth() + 1)}`.padStart(2, '0');
+            aniofnac = fnac.getFullYear();
             $("#dtfechanac").val(`${diafnac}/${mesfnac}/${aniofnac}`);
             $("#txttelfijo").val('');
             $("#txttelcelular").val('');
+            $("#txtemail").val('');
             $("#txtcalle").val('');
             $("#txtnro").val('');
             $("#txtpiso").val('');
             $("#txtdepto").val('');
             $("#txtcodaflp").val('');
-            $("#txtobservaciones").val('');
-            $("#txtnrohc").val('0');
-            tinymce.get('tahistoria').setContent("");
+            $("#taobservaciones").val('');
+            //  $("#txtnrohc").val('0');
+            // tinymce.get('tahistoria').setContent("");
 
             if (json != null) {
                 console.log(json);
                 $("#txtid").val(json.id);
                 $("#txtapeynom").val(json.apeyNom);
                 $("#txtdni").val(json.nroDocumento);
-                $("#cbotipodoc").val(json.idTipoDocumento==null?0:json.idTipoDocumento);
+                $("#cbotipodoc").val(json.idTipoDocumento == null ? 0 : json.idTipoDocumento);
 
                 fnac = new Date(json.fnac);
-                diafnac = `${(fnac.getDate() )}`.padStart(2, '0');
+                diafnac = `${(fnac.getDate())}`.padStart(2, '0');
                 mesfnac = `${(fnac.getMonth() + 1)}`.padStart(2, '0');
                 aniofnac = fnac.getFullYear();
-                $("#dtfechanac").val(`${diafnac}/${mesfnac}/${aniofnac}`);
+                // $("#dtfechanac").val(`${diafnac}/${mesfnac}/${aniofnac}`);
 
 
                 $("#txtcalle").val(json.calle);
@@ -657,13 +577,13 @@
                 $("#txttelfijo").val(json.telFijo);
                 $("#txttelcelular").val(json.telCelular);
                 $("#txtemail").val(json.email);
-                $("#cbolocalidad").val(json.idLocalidad==null?0:json.idLocalidad);
-                $("#cbomedico").val(json.idMedico==null?0:json.idMedico);
-                $("#cboprofesion").val(json.idProfesion==null?0:json.idProfesion);
-                $("#cbomutual").val(json.idMutual==null?0:json.idMutual);
-                $("#txtnroPaciente").val(json.documento);
-                $("#txtnrohc").val(json.nroHC);
-                $("#txtcodaflp").val(json.codAflp);
+                $("#cbolocalidad").val(json.idLocalidad == null ? 0 : json.idLocalidad);
+                $("#taobservaciones").val(json.observaciones);
+                $("#cboprofesion").val(json.idProfesion == null ? 0 : json.idProfesion);
+                //$("#cbomutual").val(json.idMutual==null?0:json.idMutual);
+                //$("#txtnroPaciente").val(json.documento);
+
+                //$("#txtcodaflp").val(json.codAflp);
                 if (json.sexo == "F") {
                     $('input:radio[name=sexo]')[0].checked = true;
                     $('input:radio[name=sexo]')[1].checked = false;
@@ -672,53 +592,102 @@
                     $('input:radio[name=sexo]')[0].checked = false;
                     $('input:radio[name=sexo]')[1].checked = true;
                 }
+                $("#taobservaciones").val(json.observaciones);
 
-
-                var historia = json.historia == null ? "" : json.historia;
-
-                if (historia[0] == '{') {
-                    //GET HTML DE HISTORIA CLINICA
-                    jQuery.ajax({
-                        url: "@Url.Action("ConverHCToHTML", "Paciente")" + "?historia=" + historia,
-                        type: "GET",
-                        dataType: "json",
-                        contentType: "application/json; charset=utf-8",
-                        success: function (data) {
-                            tinymce.get('tahistoria').setContent(data.data);
-                        },
-                        error: function (error) {
-                            console.log(error)
-                        }
-                    });
-                }
-                else {
-                    tinymce.get('tahistoria').setContent(historia);
-                }
-                $('#tablaConsulta').DataTable().clear().destroy();
-               $('#tablaConsulta').DataTable({
-          data: json.consulta,
-          columns: [
-            { data: 'start' },
-            { data: 'observaciones' }
-          ],
-
-           "order": {
-                    name: 'start',
-                    dir: 'desc'
-                },
-                "language": {
-                    "url": "https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
-                },
-                "order": [[0, "desc"]],
-
-
-
-
-        });
 
             }
             $("#FormModal").modal("show");
         }
+
+
+
+
+        //Abrir Modal
+        function abrirModalHC(json) {
+            console.log(json);
+            $("#txtid").val(json.id);
+            $("#txtnrohc").val(json.nroHC);
+            $("#cbomedico").val(json.idMedico == null ? 0 : json.idMedico);
+            $("#txtnrohc").val(json.nroHC);
+
+
+
+          //  tinymce.get('tahistoria').setContent("");
+            var historia = json.historia == null ? "" : json.historia;
+            debugger;
+            
+                //GET HTML DE HISTORIA CLINICA
+                jQuery.ajax({
+                    url: "@Url.Action("ConverHCToHTML", "Paciente")" + "?historia=" + historia,
+                    type: "GET",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        debugger;
+             //           tinymce.get('tahistoria').setContent(data.data);
+                    },
+                    error: function (error) {
+                        console.log(error)
+                    }
+                });
+                tinymce.get('tahistoria').setContent(historia);
+            
+
+            // $("#txtid").val(json.id);
+            // $("#txtapeynom").val(json.apeyNom);
+            // $("#txtdni").val(json.nroDocumento);
+            // $("#cbotipodoc").val(json.idTipoDocumento == null ? 0 : json.idTipoDocumento);
+
+            // fnac = new Date(json.fnac);
+            // diafnac = `${(fnac.getDate())}`.padStart(2, '0');
+            // mesfnac = `${(fnac.getMonth() + 1)}`.padStart(2, '0');
+            // aniofnac = fnac.getFullYear();
+            // // $("#dtfechanac").val(`${diafnac}/${mesfnac}/${aniofnac}`);
+
+
+            // $("#txtcalle").val(json.calle);
+            // $("#txtnro").val(json.nro);
+            // $("#txtpiso").val(json.piso);
+            // $("#txtdepto").val(json.depto);
+            // $("#txttelfijo").val(json.telFijo);
+            // $("#txttelcelular").val(json.telCelular);
+            // $("#txtemail").val(json.email);
+            // $("#cbolocalidad").val(json.idLocalidad == null ? 0 : json.idLocalidad);
+            // // $("#cbomedico").val(json.idMedico==null?0:json.idMedico);
+            // $("#cboprofesion").val(json.idProfesion == null ? 0 : json.idProfesion);
+
+
+
+            //  $('#tablaConsulta').DataTable().clear().destroy();
+            //        $('#tablaConsulta').DataTable({
+            //   data: json.consulta,
+            //   columns: [
+            //     { data: 'start' },
+            //     { data: 'observaciones' }
+            //   ],
+
+            //    "order": {
+            //             name: 'start',
+            //             dir: 'desc'
+            //         },
+            //         "language": {
+            //             "url": "https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
+            //         },
+            //         "order": [[0, "desc"]],
+
+
+
+
+            // });
+
+
+
+            $("#FormModalHc").modal("show");
+        }
+
+
+
+
 
         $("#formNivel").validate({
             rules: {
@@ -761,8 +730,6 @@
                             columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
                         },
                         className: "btn-exportar-excel",
-
-
                     },
                     {
                         extend: "pdfHtml5",
@@ -818,7 +785,7 @@
                         }
                     },
                     {
-                        "defaultContent": '<button type="button" title="Enviar Mensaje"  class="rounded-circle btn btn-sm  btn-block btn-enviar"   > <img src="../images/whatsapp.png" alt="" width="20" height="20" ></button>' +
+                        "defaultContent": ' <button type="button" title="Historia Clínica"   class= "rounded-circle btn btn-default btn-historia" > <i class="fa fa-user-md"   style = "Color: #E74C3C;"></i></button>' +
                             '<button type="button" title="Editar Paciente"   class="rounded-circle btn btn-default   btn-editar"   ><i class="fa fa-pencil"   style="Color: #E74C3C;" ></i></button>' +
                             '<button type="button" title="Eliminar Paciente" class="rounded-circle btn btn-default   btn-eliminar" ><i class="fa fa-trash-o"  style="Color: #E74C3C;" ></i></button>',
                         "orderable": false,
@@ -872,6 +839,14 @@
             filaSeleccionada = $(this).closest("tr");
             var data = tabladata.row(filaSeleccionada).data();
             abrirModal(data)
+        })
+
+        //Historia Clinica
+        $("#tabla tbody").on("click", '.btn-historia', function () {
+
+            filaSeleccionada = $(this).closest("tr");
+            var data = tabladata.row(filaSeleccionada).data();
+            abrirModalHC(data)
         })
 
         //Eliminar
@@ -1014,9 +989,9 @@
                 nroDocumento: $("#txtdni").val(),
                 idTipoDocumento: $("#cbotipodoc option:selected").val() == 0 ? null : $("#cbotipodoc option:selected").val(),
                 idProfesion: $("#cboprofesion option:selected").val() == 0 ? null : $("#cboprofesion option:selected").val(),
-                idMedico: $("#cbomedico option:selected").val() == 0 ? null : $("#cbomedico option:selected").val(),
-                idMutual: $("#cbomutual option:selected").val() == 0 ? null : $("#cbomutual option:selected").val(),
-                sexo: $('input:radio[name=sexo]')[0].checked==0? "M":"F",
+                //idMedico: $("#cbomedico option:selected").val() == 0 ? null : $("#cbomedico option:selected").val(),
+                //idMutual: $("#cbomutual option:selected").val() == 0 ? null : $("#cbomutual option:selected").val(),
+                sexo: $('input:radio[name=sexo]')[0].checked == 0 ? "M" : "F",
                 calle: $("#txtcalle").val(),
                 nro: $("#txtnro").val(),
                 piso: $("#txtpiso").val(),
@@ -1025,12 +1000,12 @@
                 telFijo: $("#txttelfijo").val(),
                 telCelular: $("#txttelcelular").val(),
                 email: $("#txtemail").val(),
-                // observaciones: null,
-                fnac: moment(yyyy + "-" + MM + "-" + DD+"T"+HH+":"+mm+":"+A).format('YYYY-MM-DDT00:00:00'),
+                observaciones: $('#taobservaciones').val(),
+                fnac: moment(yyyy + "-" + MM + "-" + DD + "T" + HH + ":" + mm + ":" + A).format('YYYY-MM-DDT00:00:00'),
                 //new Date(json.fnac).toLocaleDateString("en-GB");
-                nroHC: $("#txtnrohc").val(),
-                historia: tinymce.get('tahistoria').getContent(),
-                codAflp: $("#txtcodaflp").val()
+               // nroHC: $("#txtnrohc").val(),
+                //historia: tinymce.get('tahistoria').getContent(),
+                //codAflp: $("#txtcodaflp").val()
             };
             console.log('*');
             console.log(Paciente);
@@ -1089,11 +1064,68 @@
             )
         }
 
+
+
+        //Guardar Historia
+        function GuardarHistoria() {
+
+            if (!$("#formNivel").valid()) {
+                return;
+            }
+
+            var Paciente = {
+                id: $("#txtid").val(),
+                idMedico: $("#cbomedico option:selected").val() == 0 ? null : $("#cbomedico option:selected").val(),
+                idMutual: $("#cbomutual option:selected").val() == 0 ? null : $("#cbomutual option:selected").val(),
+                nroHC: $("#txtnrohc").val(),
+                historia: tinymce.get('tahistoria').getContent(),
+                codAflp: $("#txtcodaflp").val()
+            };
+            console.log('*');
+            console.log(Paciente);
+            console.log('*');
+            jQuery.ajax({
+                url: '@Url.Action("UpdateHCPaciente", "Paciente")',
+                type: "POST",
+                data: JSON.stringify(Paciente),
+                contentType: 'application/json',
+                success: function (data) {
+                    $(".modal-body").LoadingOverlay("hide");
+                        if (data.resultado) {
+                        tabladata.ajax.reload();
+                            
+                            agregarToast({ tipo: 'exito', titulo: 'Modificando Historia Clínica', descripcion: 'Historia Clínica modificada correctamente.', autoCierre: true });
+                        $("#FormModalHc").modal("hide");
+                            // mostrarAlert(data.mensaje)
+
+                        } else {
+                        agregarToast({ tipo: 'error', titulo: 'Modificando Historia Clínica', descripcion: data.mensaje, autoCierre: true });
+                            $("#mensajeError").text(data.mensaje);
+                            $("#mensajeError").show();
+                        }
+                   
+                },
+                beforeSend: function () {
+                    $(".modal-body").LoadingOverlay("show", {
+                        imageResizeFactor: 2,
+                        text: "Cargando...",
+                        size: 14
+                    });
+                },
+                error: function (error) {
+                    $(".modal-body").LoadingOverlay("hide");
+                    $("#mensajeError").text("Error Ajax");
+                    $("#mensajeError").show();
+                }
+            }
+            )
+        }
+
         tinymce.init({
             selector: 'textarea#tahistoria',
             height: 310,
             license_key: 'gpl',
-             language : 'es',
+            language: 'es',
             plugins: [
                 'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
                 'anchor', 'searchreplace', 'visualblocks', 'fullscreen',
