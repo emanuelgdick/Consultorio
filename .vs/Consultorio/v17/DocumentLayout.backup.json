@@ -3,24 +3,68 @@
   "WorkspaceRootPath": "C:\\Consultorio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\views\\consulta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\consulta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AA678DB3-D24E-462A-8611-852C08884C77}|Api\\Api.csproj|c:\\consultorio\\api\\controllers\\pacientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AA678DB3-D24E-462A-8611-852C08884C77}|Api\\Api.csproj|solutionrelative:api\\controllers\\pacientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\controllers\\diagnosticocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\controllers\\diagnosticocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\controllers\\pacientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\controllers\\pacientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\views\\paciente\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\paciente\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\views\\consulta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\consulta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AA678DB3-D24E-462A-8611-852C08884C77}|Api\\Api.csproj|c:\\consultorio\\api\\controllers\\consultacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AA678DB3-D24E-462A-8611-852C08884C77}|Api\\Api.csproj|solutionrelative:api\\controllers\\consultacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\controllers\\consultacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\controllers\\consultacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA678DB3-D24E-462A-8611-852C08884C77}|Api\\Api.csproj|c:\\consultorio\\api\\controllers\\diagnosticocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA678DB3-D24E-462A-8611-852C08884C77}|Api\\Api.csproj|solutionrelative:api\\controllers\\diagnosticocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA678DB3-D24E-462A-8611-852C08884C77}|Api\\Api.csproj|c:\\consultorio\\api\\models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA678DB3-D24E-462A-8611-852C08884C77}|Api\\Api.csproj|solutionrelative:api\\models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\views\\medico\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\medico\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\controllers\\medicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\controllers\\medicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\views\\diagnostico\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\diagnostico\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|c:\\consultorio\\frontend\\controllers\\diagnosticocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2924DB34-875C-444B-BB4D-53187ADC6626}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\controllers\\diagnosticocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,68 +90,202 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Views\\Consulta\\Index.cshtml",
-              "RelativeDocumentMoniker": "FrontEnd\\Views\\Consulta\\Index.cshtml",
-              "ToolTip": "C:\\Consultorio\\FrontEnd\\Views\\Consulta\\Index.cshtml",
-              "RelativeToolTip": "FrontEnd\\Views\\Consulta\\Index.cshtml",
-              "ViewState": "AgIAABUCAAAAAAAAAAAkwCQCAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-22T21:01:25.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PacienteController.cs",
-              "DocumentMoniker": "C:\\Consultorio\\Api\\Controllers\\PacienteController.cs",
-              "RelativeDocumentMoniker": "Api\\Controllers\\PacienteController.cs",
-              "ToolTip": "C:\\Consultorio\\Api\\Controllers\\PacienteController.cs",
-              "RelativeToolTip": "Api\\Controllers\\PacienteController.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAgwIMAAAA9AAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Controllers\\PacienteController.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Controllers\\PacienteController.cs",
+              "ToolTip": "C:\\Consultorio\\FrontEnd\\Controllers\\PacienteController.cs",
+              "RelativeToolTip": "FrontEnd\\Controllers\\PacienteController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwDwAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T21:48:00.641Z",
+              "WhenOpened": "2025-08-25T20:20:32.402Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ConsultaController.cs",
-              "DocumentMoniker": "C:\\Consultorio\\Api\\Controllers\\ConsultaController.cs",
-              "RelativeDocumentMoniker": "Api\\Controllers\\ConsultaController.cs",
-              "ToolTip": "C:\\Consultorio\\Api\\Controllers\\ConsultaController.cs",
-              "RelativeToolTip": "Api\\Controllers\\ConsultaController.cs",
-              "ViewState": "AgIAAOgAAAAAAAAAAAAUwPoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T20:01:14.428Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Views\\Paciente\\Index.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\Paciente\\Index.cshtml",
+              "ToolTip": "C:\\Consultorio\\FrontEnd\\Views\\Paciente\\Index.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\Paciente\\Index.cshtml",
+              "ViewState": "AgIAAKgCAAAAAAAAAAAAALgCAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T20:18:29.873Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Views\\Consulta\\Index.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\Consulta\\Index.cshtml",
+              "ToolTip": "C:\\Consultorio\\FrontEnd\\Views\\Consulta\\Index.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\Consulta\\Index.cshtml",
+              "ViewState": "AgIAALACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T20:17:57.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Program.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Program.cs",
+              "ToolTip": "C:\\Consultorio\\FrontEnd\\Program.cs",
+              "RelativeToolTip": "FrontEnd\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T10:29:05.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Consultorio\\FrontEnd\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T18:56:30.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ApiService.cs",
               "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Services\\ApiService.cs",
               "RelativeDocumentMoniker": "FrontEnd\\Services\\ApiService.cs",
               "ToolTip": "C:\\Consultorio\\FrontEnd\\Services\\ApiService.cs",
               "RelativeToolTip": "FrontEnd\\Services\\ApiService.cs",
-              "ViewState": "AgIAAKoBAAAAAAAAAAAUwOIBAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAApwBsBAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T20:01:14.443Z",
+              "WhenOpened": "2025-08-24T12:22:11.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "PacienteController.cs",
+              "DocumentMoniker": "C:\\Consultorio\\Api\\Controllers\\PacienteController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\PacienteController.cs",
+              "ToolTip": "C:\\Consultorio\\Api\\Controllers\\PacienteController.cs",
+              "RelativeToolTip": "Api\\Controllers\\PacienteController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFgAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T23:13:00.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Views\\Medico\\Index.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\Medico\\Index.cshtml",
+              "ToolTip": "C:\\Consultorio\\FrontEnd\\Views\\Medico\\Index.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\Medico\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-16T10:30:19.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConsultaController.cs",
+              "DocumentMoniker": "C:\\Consultorio\\Api\\Controllers\\ConsultaController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\ConsultaController.cs",
+              "ToolTip": "C:\\Consultorio\\Api\\Controllers\\ConsultaController.cs",
+              "RelativeToolTip": "Api\\Controllers\\ConsultaController.cs",
+              "ViewState": "AgIAAC0BAAAAAAAAAAA+wE4BAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T19:43:30.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConsultaController.cs",
+              "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Controllers\\ConsultaController.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Controllers\\ConsultaController.cs",
+              "ToolTip": "C:\\Consultorio\\FrontEnd\\Controllers\\ConsultaController.cs",
+              "RelativeToolTip": "FrontEnd\\Controllers\\ConsultaController.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAlwKEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T19:46:25.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MedicoController.cs",
+              "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Controllers\\MedicoController.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Controllers\\MedicoController.cs",
+              "ToolTip": "C:\\Consultorio\\FrontEnd\\Controllers\\MedicoController.cs",
+              "RelativeToolTip": "FrontEnd\\Controllers\\MedicoController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T10:30:57.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Paciente.cs",
+              "DocumentMoniker": "C:\\Consultorio\\Api\\Models\\Paciente.cs",
+              "RelativeDocumentMoniker": "Api\\Models\\Paciente.cs",
+              "ToolTip": "C:\\Consultorio\\Api\\Models\\Paciente.cs",
+              "RelativeToolTip": "Api\\Models\\Paciente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T23:12:50.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DiagnosticoController.cs",
+              "DocumentMoniker": "C:\\Consultorio\\Api\\Controllers\\DiagnosticoController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\DiagnosticoController.cs",
+              "ToolTip": "C:\\Consultorio\\Api\\Controllers\\DiagnosticoController.cs",
+              "RelativeToolTip": "Api\\Controllers\\DiagnosticoController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T13:40:48.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "DiagnosticoController.cs",
               "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Controllers\\DiagnosticoController.cs",
               "RelativeDocumentMoniker": "FrontEnd\\Controllers\\DiagnosticoController.cs",
               "ToolTip": "C:\\Consultorio\\FrontEnd\\Controllers\\DiagnosticoController.cs",
               "RelativeToolTip": "FrontEnd\\Controllers\\DiagnosticoController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAUwC4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T19:34:30.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-04T21:29:33.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Views\\Diagnostico\\Index.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\Diagnostico\\Index.cshtml",
+              "ToolTip": "C:\\Consultorio\\FrontEnd\\Views\\Diagnostico\\Index.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\Diagnostico\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-04T18:53:03.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Consultorio\\FrontEnd\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Consultorio\\FrontEnd\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-04T18:51:09.679Z"
             }
           ]
         }

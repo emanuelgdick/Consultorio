@@ -543,50 +543,7 @@
                          $("#txtobs").val(args.e.data.text);
                          $("#txtid").val(args.e.data.id);
                          $("#colorSelect").val(args.e.data.color);
-                         $("#id_label_multiple").empty();
-        
-                         $(".js-example-basic-multiple").select2({
-                             theme: "classic",
-                         ajax: {
-                             url: '@Url.Action("GetAllDiagnosticos", "Diagnostico")',
-                             dataType: 'json',
-                             delay: 250,
-                             data: function (params) {
-                                return {
-                                        q: params.term, 
-                                        };
-                            },
-                            processResults: function (data, params) {
-                                return {
-                                    results: data.data
-                                };
-                            },
-                            cache: true
-                         },
-                         placeholder: 'Selecciona una opción',
-                         allowClear: true,
-                         language: "es",
-                         dropdownParent: $('#FormModal'),
-                         multiple: true,
-                         minimumInputLength: 1,
-                         templateResult: function (data) { 
-                         if (data.loading) {
-                            return data.text;
-                         }
-                        var $container = $(
-                         "<div class='select2-result-repository clearfix'>" +
-                         "<div class='select2-result-repository__meta'>" +
-                         "<div class='select2-result-repository__title'></div>" +
-                         "</div>" +
-                         "</div>"
-                        );
-                        $container.find(".select2-result-repository__title").text(data.text);
-                        return $container;
-                         },
-
-
-                   
-            });
+                  
 
         for (var i = 0; i <args.e.data.diagnosticos.length; i++) {
              var newOption = new Option(args.e.cache.diagnosticos[i].diagnostico.descripcion, args.e.data.diagnosticos[i].idDiagnostico, true, true);
@@ -619,6 +576,54 @@
 
                  }
                    else {
+
+
+
+                              $("#id_label_multiple").empty();
+
+                         $(".js-example-basic-multiple").select2({
+                             theme: "classic",
+                         ajax: {
+                             url: '@Url.Action("GetAllDiagnosticos", "Diagnostico")',
+                             dataType: 'json',
+                             delay: 250,
+                             data: function (params) {
+                                return {
+                                        q: params.term,
+                                        };
+                            },
+                            processResults: function (data, params) {
+                                return {
+                                    results: data.data
+                                };
+                            },
+                            cache: true
+                         },
+                         placeholder: 'Selecciona una opción',
+                         allowClear: true,
+                         language: "es",
+                         dropdownParent: $('#FormModal'),
+                         multiple: true,
+                         minimumInputLength: 1,
+                         templateResult: function (data) {
+                         if (data.loading) {
+                            return data.text;
+                         }
+                        var $container = $(
+                         "<div class='select2-result-repository clearfix'>" +
+                         "<div class='select2-result-repository__meta'>" +
+                         "<div class='select2-result-repository__title'></div>" +
+                         "</div>" +
+                         "</div>"
+                        );
+                        $container.find(".select2-result-repository__title").text(data.text);
+                        return $container;
+                         },
+
+
+
+            });
+
                          desde = desde = moment(args.start.value);
                          hasta = moment(args.end.value);
                          $("#txtstart").val(desde.format('DD-MM-YYYY HH:mm'));

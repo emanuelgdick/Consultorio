@@ -35,6 +35,7 @@ namespace Api.Controllers
             var profesion = _db.Profesion.ToList();
             //var medico = _db.Medico.ToList();
             var consulta = _db.Consulta.OrderByDescending(s=>s.start).ToList();
+           
 
             // Realizar la unión utilizando Join
             var resultado = (from pac in paciente
@@ -67,7 +68,25 @@ namespace Api.Controllers
                                 Consulta = consultaPaciente,
                                 codAflp = pac.codAflp,
                                 Historia = pac.Historia,
-                                NroHC = pac.NroHC
+                                NroHC = pac.NroHC,
+                                //ConsultaDiagnostico = (from cd in _db.ConsultaDiagnostico
+                                //                       where cd.IdDiagnostico == con.Id
+                                //                select new //CarritoItem()
+                                //                {
+                                //                    Id = dc.Id,
+                                //                    IdCarrito = dc.IdCarrito,
+                                //                    IdProducto = dc.IdProducto,
+                                //                    Punitario = dc.Punitario,
+                                //                    Cantidad = dc.Cantidad,
+
+                                //                    oProducto = new //Producto()
+                                //                    {
+                                //                        Id = dc.IdProducto,//dc.IdProducto,
+                                //                        Descripcion = _dbcontext.Productos.Where(s => s.Id == dc.IdProducto).FirstOrDefault().Descripcion,//dc.oProducto.Descripcion,
+                                //                        Imagen = _dbcontext.Productos.Where(s => s.Id == dc.IdProducto).FirstOrDefault().Imagen,//dc.oProducto.Descripcion,
+
+                                //                    },
+                                //                }).ToList(),
 
 
                             });

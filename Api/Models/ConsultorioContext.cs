@@ -4,6 +4,10 @@ namespace Api.Models
 {
     public class ConsultorioContext : DbContext
     {
+        public ConsultorioContext()
+        {
+
+        }
         public ConsultorioContext(DbContextOptions options) : base(options)
         {
           
@@ -18,6 +22,7 @@ namespace Api.Models
         public DbSet<Paciente> Paciente { get; set; }
         public DbSet<Consulta> Consulta { get; set; }
         public DbSet<ConsultaDiagnostico> ConsultaDiagnostico { get; set; }
+        
 
 
 

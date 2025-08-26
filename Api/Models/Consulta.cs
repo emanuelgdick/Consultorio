@@ -26,5 +26,6 @@ namespace Api.Models
         public string? observaciones { get; set; }
 
         public virtual ICollection<ConsultaDiagnostico> Diagnosticos { get; set; }
+  
     }
 }

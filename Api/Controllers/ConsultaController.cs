@@ -103,9 +103,6 @@ namespace Api.Controllers
             return Ok(resultado);
         }
 
-
-
-
         // GET: api/Events
         [HttpGet("GetEventsByFecha")]
         [Authorize]
@@ -246,8 +243,10 @@ namespace Api.Controllers
 
         // PUT: api/Events/5/color
         [HttpPut("{id}/UpdateConsulta")]
-        public async Task<IActionResult> UpdateConsulta([FromRoute] int id, [FromBody] Consulta param)
+        public async Task<IActionResult>  UpdateConsulta([FromRoute] int id, [FromBody] Consulta param)
         {
+
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -258,6 +257,14 @@ namespace Api.Controllers
             {
                 return NotFound();
             }
+
+            
+            foreach (var diag in @event.Diagnosticos.ToList())
+            {
+                @event.Diagnosticos.Remove(diag);
+            }
+
+
 
             @event.IdPaciente = param.IdPaciente;
             @event.observaciones = param.observaciones;
@@ -331,11 +338,21 @@ namespace Api.Controllers
             }
 
             var @event = await _db.Consulta.SingleOrDefaultAsync(m => m.Id == id);
+            List<ConsultaDiagnostico> diag = _db.ConsultaDiagnostico.Where(r=>r.IdConsulta==id).ToList();
             if (@event == null)
             {
                 return NotFound();
             }
+          
+                foreach (var cd in diag)
+                {
 
+                    _db.ConsultaDiagnostico.Remove(cd);
+
+
+                }
+          
+            
             _db.Consulta.Remove(@event);
             await _db.SaveChangesAsync();
 

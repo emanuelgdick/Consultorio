@@ -468,7 +468,7 @@ namespace FrontEnd.Services
             return APIResponse;
         }
 
-        public async Task UpdateConsulta(int id, Consulta c, string token)
+        public async Task UpdateConsulta(int id,  Consulta c, string token)
         {
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             HttpResponseMessage response = await _httpClient.PutAsJsonAsync<Consulta>($"api/Consulta/{c.Id}/UpdateConsulta", c);
