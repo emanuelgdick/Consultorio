@@ -68,7 +68,7 @@ namespace Api.Controllers
                                 Email = pac.Email,
                                 Sexo = pac.Sexo,
                                 Consulta = consultaPaciente,
-                                codAflp = pac.codAflp,
+                                codAflp = pac.CodAflp,
                                 Historia = pac.Historia,
                                 NroHC = pac.NroHC,
                                 Observaciones = pac.Observaciones,
@@ -138,7 +138,7 @@ namespace Api.Controllers
                                     Id = pp?.Id == null ? 0 : pp.Id,
                                     Descripcion = pp?.Descripcion == null ? "" : pp.Descripcion
                                 },
-                                codAflp = pac.codAflp,
+                                codAflp = pac.CodAflp,
                                 Historia = pac.Historia,
                                 NroHC = pac.NroHC
                             };
@@ -204,7 +204,7 @@ namespace Api.Controllers
             Paciente.IdProfesion = paciente.IdProfesion == 0 ? null : paciente.IdProfesion;
             Paciente.IdMedico = paciente.IdMedico == 0 ? null : paciente.IdMedico;
             Paciente.Sexo = paciente.Sexo;
-            Paciente.IdMutual = paciente.IdMutual == 0 ? null : paciente.IdMutual;
+            //Paciente.IdMutual = paciente.IdMutual == 0 ? null : paciente.IdMutual;
             Paciente.IdLocalidad   = paciente.IdLocalidad == 0 ? null : paciente.IdLocalidad;
             Paciente.Calle = paciente.Calle;
             Paciente.Nro = paciente.Nro;
@@ -213,10 +213,10 @@ namespace Api.Controllers
             Paciente.TelFijo = paciente.TelFijo;
             Paciente.TelCelular = paciente.TelCelular;
             Paciente.Email = paciente.Email;
-            Paciente.NroHC = paciente.NroHC;
+            //Paciente.NroHC = paciente.NroHC;
             Paciente.Observaciones = paciente.Observaciones;
-            Paciente.codAflp = paciente.codAflp;
-            Paciente.Historia = paciente.Historia;
+            //Paciente.codAflp = paciente.codAflp;
+           // Paciente.Historia = paciente.Historia;
             _db.SaveChanges();
             return Ok(Paciente);
 
@@ -228,7 +228,7 @@ namespace Api.Controllers
 
         [HttpPost("UpdateHcPaciente")]
         [Authorize]
-        public ActionResult<Paciente> UpdateHcPaciente(Int32 id, [FromBody] string historia)
+        public ActionResult<PacienteDTO> UpdateHcPaciente(Int32 id, [FromBody] PacienteDTO paciente)
         {
           
 
@@ -238,7 +238,11 @@ namespace Api.Controllers
                 return NotFound();
             }
 
-            Paciente.Historia = historia;
+            Paciente.Historia = paciente.Historia;
+            Paciente.CodAflp = paciente.CodAflp;
+            Paciente.NroHC = paciente.NroHC;
+            Paciente.IdMutual = paciente.IdMutual == 0 ? null : paciente.IdMutual;
+            Paciente.IdMedico = paciente.IdMedico == 0 ? null : paciente.IdMedico;
             _db.SaveChanges();
             return Ok(Paciente);
 

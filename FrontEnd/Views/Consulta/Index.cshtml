@@ -631,8 +631,10 @@
                          $("#cbopaciente").val(0);
                          // $("#cbodiagnostico").val(0);
                          if ($("#cbomedicoF").val() == 0) {
+                             $("#cbomedico").prop("disabled", false);
                              $("#cbomedico").val(0)
                          } else {
+                             $("#cbomedico").prop("disabled", true);
                              $("#cbomedico").val($("#cbomedicoF").val())
                          }
                          //$("#cbomedico").val(0);

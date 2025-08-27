@@ -4,14 +4,15 @@ public static class RtfHelper
 {
     public static string? ConvertRtfToHtml(string rtfText)
     {
-        if (rtfText != null) { 
+        if ((rtfText == null) || (rtfText==""))
+            return null;
         
         if (rtfText[0] == '{')
         {
             return Rtf.ToHtml(rtfText);
         }
-            else return null;
+            else return rtfText;
         }
-        else return null;
-    }
+       
+   
 }

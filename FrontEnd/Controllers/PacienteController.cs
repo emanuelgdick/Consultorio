@@ -44,7 +44,7 @@ namespace FrontEnd.Controllers
             return View(totales);
 
         }
-        public ActionResult ConverHCToHTML(string historia)
+        public ActionResult ConverHCToHTML([FromBody] string historia)
         {
             string htmlContent = RtfHelper.ConvertRtfToHtml(historia);
           //  ViewBag.HtmlContent = htmlContent; // Pasar el contenido HTML al modelo de la vista.
@@ -142,7 +142,7 @@ namespace FrontEnd.Controllers
 
         [Authorize(Roles = "Admin")]
         [ResponseCache(Duration = 30)]
-        public async Task<JsonResult> UpdateHCPaciente([FromBody] Paciente paciente)
+        public async Task<JsonResult> UpdateHCPaciente([FromBody] PacienteDTO paciente)
         {
             object resultado = null;
             string mensaje = String.Empty;

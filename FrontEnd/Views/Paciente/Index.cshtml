@@ -233,7 +233,7 @@
     <div class="modal-dialog  modal-lg ">
         <div class="modal-content">
             <div class="modal-header text-white" style="background: #2A3F54">
-                <h5 class="modal-title" id="exampleModalLabel">Historia Clínica</h5>
+                <h5 class="modal-title" id="titulo"></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body m-0 p-0">
@@ -252,9 +252,6 @@
                                             <select id="cbomedico" class="form-select " name="medico" autocomplete="off" placeholder="Médico"></select>
                                             <label for="cbomedico" class="form-label pt-1">Médico</label>
                                         </div>
-
-                                    </div>
-                                    <div class="row m-1">
                                         <div class=" col-4 p-2 form-floating">
                                             <select id="cbomutual" class="form-select " name="mutual" autocomplete="off" placeholder="Mutual"></select>
                                             <label for="cbomutual" class="form-label pt-1">Mutual</label>
@@ -263,8 +260,8 @@
                                             <input type="text" class="form-control form-control-sm" id="txtcodaflp" placeholder="Cód. Afiliado" />
                                             <label for="txtcodaflp">Cód. Afiliado</label>
                                         </div>
-
                                     </div>
+                                    
 
 
                                     <div class="row m-1">
@@ -567,7 +564,7 @@
                 diafnac = `${(fnac.getDate())}`.padStart(2, '0');
                 mesfnac = `${(fnac.getMonth() + 1)}`.padStart(2, '0');
                 aniofnac = fnac.getFullYear();
-                // $("#dtfechanac").val(`${diafnac}/${mesfnac}/${aniofnac}`);
+                 $("#dtfechanac").val(`${diafnac}/${mesfnac}/${aniofnac}`);
 
 
                 $("#txtcalle").val(json.calle);
@@ -602,35 +599,43 @@
 
 
 
-        //Abrir Modal
+        //Abrir Modal HC
         function abrirModalHC(json) {
-            console.log(json);
+            $("#titulo").html('Historia Clínica de '+json.apeyNom);
             $("#txtid").val(json.id);
             $("#txtnrohc").val(json.nroHC);
             $("#cbomedico").val(json.idMedico == null ? 0 : json.idMedico);
-            $("#txtnrohc").val(json.nroHC);
+            $("#txtcodaflp").val(json.codAflp);
+            $("#cbomutual").val(json.idMutual == null ? 0 : json.idMutual);
+          
 
 
-
-          //  tinymce.get('tahistoria').setContent("");
-            var historia = json.historia == null ? "" : json.historia;
             debugger;
-            
+          //  tinymce.get('tahistoria').setContent("");
+           // var historia = json.historia == null ? "" : json.historia;
+          
+            if (json.historia!=null)  {
                 //GET HTML DE HISTORIA CLINICA
                 jQuery.ajax({
-                    url: "@Url.Action("ConverHCToHTML", "Paciente")" + "?historia=" + historia,
-                    type: "GET",
+                    url: "@Url.Action("ConverHCToHTML", "Paciente")" ,
+                    type: "POST",
+                    data:JSON.stringify(json.historia),
                     dataType: "json",
                     contentType: "application/json; charset=utf-8",
                     success: function (data) {
                         debugger;
-             //           tinymce.get('tahistoria').setContent(data.data);
+                        console.log(data.data);
+                        tinymce.get('tahistoria').setContent(data.data);
                     },
                     error: function (error) {
                         console.log(error)
                     }
                 });
-                tinymce.get('tahistoria').setContent(historia);
+                }
+                else{
+                     tinymce.get('tahistoria').setContent("");
+                }
+               
             
 
             // $("#txtid").val(json.id);
@@ -1074,12 +1079,12 @@
             }
 
             var Paciente = {
-                id: $("#txtid").val(),
-                idMedico: $("#cbomedico option:selected").val() == 0 ? null : $("#cbomedico option:selected").val(),
-                idMutual: $("#cbomutual option:selected").val() == 0 ? null : $("#cbomutual option:selected").val(),
-                nroHC: $("#txtnrohc").val(),
-                historia: tinymce.get('tahistoria').getContent(),
-                codAflp: $("#txtcodaflp").val()
+                Id: $("#txtid").val(),
+                IdMedico: $("#cbomedico option:selected").val() == 0 ? null : $("#cbomedico option:selected").val(),
+                IdMutual: $("#cbomutual option:selected").val() == 0 ? null : $("#cbomutual option:selected").val(),
+                NroHC: $("#txtnrohc").val(),
+                Historia: tinymce.get('tahistoria').getContent(),
+                CodAflp: $("#txtcodaflp").val()
             };
             console.log('*');
             console.log(Paciente);

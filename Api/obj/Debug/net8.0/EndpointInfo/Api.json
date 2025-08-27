@@ -1360,6 +1360,64 @@
         }
       }
     },
+    "/api/Paciente/UpdateHcPaciente": {
+      "post": {
+        "tags": [
+          "Paciente"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PacienteDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PacienteDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PacienteDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PacienteDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PacienteDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PacienteDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Paciente/DeletePaciente": {
       "put": {
         "tags": [
@@ -2181,7 +2239,8 @@
           },
           "nroHC": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "observaciones": {
             "type": "string",
@@ -2189,6 +2248,39 @@
           },
           "codAflp": {
             "type": "string",
+            "nullable": true
+          },
+          "historia": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PacienteDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nroHC": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "codAflp": {
+            "type": "string",
+            "nullable": true
+          },
+          "idMutual": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "idMedico": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "historia": {

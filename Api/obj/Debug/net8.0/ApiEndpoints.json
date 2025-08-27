@@ -818,6 +818,37 @@
   },
   {
     "ContainingType": "Api.Controllers.PacienteController",
+    "Method": "UpdateHcPaciente",
+    "RelativePath": "api/Paciente/UpdateHcPaciente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "paciente",
+        "Type": "Api.Models.DTOs.PacienteDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Api.Models.DTOs.PacienteDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Api.Controllers.PacienteController",
     "Method": "UpdatePaciente",
     "RelativePath": "api/Paciente/UpdatePaciente",
     "HttpMethod": "POST",

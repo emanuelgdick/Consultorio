@@ -47,7 +47,7 @@ namespace FrontEnd.Models
         public string? TelCelular { get; set; }
         public string? Email { get; set; }
         public DateTime? Fnac { get; set; }
-        public int NroHC { get; set; }
+        public int? NroHC { get; set; }
         public string? Observaciones { get; set; }
         public string? codAflp { get; set; }
         [AllowHtml]
