@@ -843,6 +843,7 @@
 
             filaSeleccionada = $(this).closest("tr");
             var data = tabladata.row(filaSeleccionada).data();
+            console.log(data);
             abrirModal(data)
         })
 
@@ -851,6 +852,7 @@
 
             filaSeleccionada = $(this).closest("tr");
             var data = tabladata.row(filaSeleccionada).data();
+            
             abrirModalHC(data)
         })
 
@@ -1008,7 +1010,7 @@
                 observaciones: $('#taobservaciones').val(),
                 fnac: moment(yyyy + "-" + MM + "-" + DD + "T" + HH + ":" + mm + ":" + A).format('YYYY-MM-DDT00:00:00'),
                 //new Date(json.fnac).toLocaleDateString("en-GB");
-               // nroHC: $("#txtnrohc").val(),
+                //nroHC: $("#txtnrohc").val(),
                 //historia: tinymce.get('tahistoria').getContent(),
                 //codAflp: $("#txtcodaflp").val()
             };
@@ -1052,6 +1054,8 @@
                             $("#mensajeError").show();
                         }
                     }
+
+                    tabladata.ajax.reload();
                 },
                 beforeSend: function () {
                     $(".modal-body").LoadingOverlay("show", {

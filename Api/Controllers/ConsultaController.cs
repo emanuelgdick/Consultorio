@@ -44,7 +44,7 @@ namespace Api.Controllers
             var resultado = from con in consulta
                             join pac in paciente on con.IdPaciente equals pac.Id into consultaPaciente
                             join mut in mutual on con.Paciente.IdMutual equals mut.Id into mutualPaciente
-                            join cd in conDiag on con.Id equals cd.IdConsulta into diagPaciente
+                            //join cd in conDiag on con.Id equals cd.IdConsulta into diagPaciente
                             
                             from cp in consultaPaciente.DefaultIfEmpty()
                             from mp in mutualPaciente.DefaultIfEmpty()
@@ -59,8 +59,9 @@ namespace Api.Controllers
                                 IdPaciente=con.IdPaciente,
                                 IdMedico = con.IdMedico,
                                 color =con.color,
-                                mutual=con.Paciente.IdMutual == null ? "" :mp.DescA,
-                                diagnosticos = diagPaciente
+                                observaciones=con.observaciones,
+                                mutual =con.Paciente.IdMutual == null ? "" :mp.DescA,
+                               // diagnosticos = diagPaciente
                             };
                 
 
@@ -89,12 +90,13 @@ namespace Api.Controllers
                             select new
                             {
                                 Id = con.Id,
-                                text = con.Paciente.Mutual == null ? cp.ApeyNom + "(Sin Mutual)" + "\n" + "Tel Fijo:" + cp.TelFijo + "\n" + "Tel Celular:" + cp.TelCelular + "\n" + con.observaciones : cp.ApeyNom + "(" + mp.DescA + ")\n" + "Tel Fijo:" + cp.TelFijo + "\n" + "Tel Celular:" + cp.TelCelular + "\n" + con.observaciones,
+                                text =con.Paciente.Mutual == null ? cp.ApeyNom + "(Sin Mutual)" + "\n" + "Tel Fijo:" + cp.TelFijo + "\n" + "Tel Celular:" + cp.TelCelular + "\n" + con.observaciones : cp.ApeyNom + "(" + mp.DescA + ")\n" + "Tel Fijo:" + cp.TelFijo + "\n" + "Tel Celular:" + cp.TelCelular + "\n" + con.observaciones,
                                 start = con.start,
                                 end = con.end,
                                 IdPaciente = con.IdPaciente,
                                 IdMedico = con.IdMedico,
                                 color = con.color,
+                                observaciones = con.observaciones,
                                 mutual = con.Paciente.IdMutual == null ? "" : mp.DescA
                             };
 
@@ -258,18 +260,18 @@ namespace Api.Controllers
                 return NotFound();
             }
 
-            
-            foreach (var diag in @event.Diagnosticos.ToList())
-            {
-                @event.Diagnosticos.Remove(diag);
-            }
+
+            //foreach (var diag in @event.Diagnosticos.ToList())
+            //{
+            //    @event.Diagnosticos.Remove(diag);
+            //}
 
 
-
+            @event.IdMedico = param.IdMedico;
             @event.IdPaciente = param.IdPaciente;
             @event.observaciones = param.observaciones;
             @event.color = param.color;
-            @event.Diagnosticos = param.Diagnosticos;
+           // @event.Diagnosticos = param.Diagnosticos;
 
             try
             {

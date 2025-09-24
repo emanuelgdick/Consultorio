@@ -69,10 +69,10 @@ namespace Api.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("IdConsulta")
+                    b.Property<int>("IdConsulta")
                         .HasColumnType("int");
 
-                    b.Property<int?>("IdDiagnostico")
+                    b.Property<int>("IdDiagnostico")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -176,6 +176,9 @@ namespace Api.Migrations
                     b.Property<string>("Calle")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CodAflp")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Depto")
                         .HasColumnType("nvarchar(max)");
 
@@ -210,7 +213,7 @@ namespace Api.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("NroHC")
+                    b.Property<int?>("NroHC")
                         .HasColumnType("int");
 
                     b.Property<string>("Observaciones")
@@ -227,9 +230,6 @@ namespace Api.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TelFijo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("codAflp")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -337,11 +337,15 @@ namespace Api.Migrations
                 {
                     b.HasOne("Api.Models.Consulta", "Consulta")
                         .WithMany("Diagnosticos")
-                        .HasForeignKey("IdConsulta");
+                        .HasForeignKey("IdConsulta")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Api.Models.Diagnostico", "Diagnostico")
                         .WithMany("Consultas")
-                        .HasForeignKey("IdDiagnostico");
+                        .HasForeignKey("IdDiagnostico")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Consulta");
 

@@ -25,6 +25,6 @@ namespace FrontEnd.Models
         public string text { get; set; }
         public string? color { get; set; }
         public string? observaciones { get; set; }
-        public virtual ICollection<ConsultaDiagnostico> Diagnosticos { get; set; }
+        //public virtual ICollection<ConsultaDiagnostico> Diagnosticos { get; set; }
     }
 }
