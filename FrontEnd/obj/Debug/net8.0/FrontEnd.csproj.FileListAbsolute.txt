@@ -630,11 +630,6 @@ C:\Consultorio\FrontEnd\obj\Debug\net8.0\FrontEnd.RazorAssemblyInfo.cs
 C:\Consultorio\FrontEnd\obj\Debug\net8.0\FrontEnd.sourcelink.json
 C:\Consultorio\FrontEnd\obj\Debug\net8.0\staticwebassets.build.json
 C:\Consultorio\FrontEnd\obj\Debug\net8.0\staticwebassets.development.json
-C:\Consultorio\FrontEnd\obj\Debug\net8.0\staticwebassets\msbuild.FrontEnd.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Consultorio\FrontEnd\obj\Debug\net8.0\staticwebassets\msbuild.build.FrontEnd.props
-C:\Consultorio\FrontEnd\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.FrontEnd.props
-C:\Consultorio\FrontEnd\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FrontEnd.props
-C:\Consultorio\FrontEnd\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Consultorio\FrontEnd\obj\Debug\net8.0\scopedcss\bundle\FrontEnd.styles.css
 C:\Consultorio\FrontEnd\obj\Debug\net8.0\FrontEnd.dll
 C:\Consultorio\FrontEnd\obj\Debug\net8.0\refint\FrontEnd.dll
@@ -642,4 +637,9 @@ C:\Consultorio\FrontEnd\obj\Debug\net8.0\FrontEnd.pdb
 C:\Consultorio\FrontEnd\obj\Debug\net8.0\FrontEnd.genruntimeconfig.cache
 C:\Consultorio\FrontEnd\obj\Debug\net8.0\ref\FrontEnd.dll
 C:\Consultorio\FrontEnd\bin\Debug\net8.0\System.Formats.Asn1.dll
+C:\Consultorio\FrontEnd\obj\Debug\net8.0\staticwebassets\msbuild.FrontEnd.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Consultorio\FrontEnd\obj\Debug\net8.0\staticwebassets\msbuild.build.FrontEnd.props
+C:\Consultorio\FrontEnd\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.FrontEnd.props
+C:\Consultorio\FrontEnd\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FrontEnd.props
+C:\Consultorio\FrontEnd\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Consultorio\FrontEnd\obj\Debug\net8.0\FrontEnd.csproj.CopyComplete
